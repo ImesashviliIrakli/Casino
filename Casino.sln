@@ -5,55 +5,55 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{EE205632-B8BE-47CE-A872-5AD6CC58483B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Domain", "BuildingBlocks\BuildingBlocks.Domain\BuildingBlocks.Domain.csproj", "{C34C17DD-D601-4BC1-981E-F77D90E36108}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Domain", "BuildingBlocks\BuildingBlocks.Domain\BuildingBlocks.Domain.csproj", "{C34C17DD-D601-4BC1-981E-F77D90E36108}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Applictaion", "BuildingBlocks\BuildingBlocks.Applictaion\BuildingBlocks.Applictaion.csproj", "{1EEE0DB5-BA04-41F5-9947-1D7094B69F69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Applictaion", "BuildingBlocks\BuildingBlocks.Applictaion\BuildingBlocks.Applictaion.csproj", "{1EEE0DB5-BA04-41F5-9947-1D7094B69F69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Infrastructure", "BuildingBlocks\BuildingBlocks.Infrastructure\BuildingBlocks.Infrastructure.csproj", "{7244E252-42E2-4C48-AEB4-CCDB88DAB293}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Resources", "BuildingBlocks\BuildingBlocks.Resources\BuildingBlocks.Resources.csproj", "{FEB270E3-3488-4D85-8949-4EA2DF48A7DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Resources", "BuildingBlocks\BuildingBlocks.Resources\BuildingBlocks.Resources.csproj", "{FEB270E3-3488-4D85-8949-4EA2DF48A7DD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Banking", "Banking", "{E80AAF7F-8B6C-47BA-93AE-AF43E7CEF4D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Domain", "Banking\Banking.Domain\Banking.Domain.csproj", "{244AD7DF-BFB1-4B9C-80DE-233B2D3F5516}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banking.Domain", "Banking\Banking.Domain\Banking.Domain.csproj", "{244AD7DF-BFB1-4B9C-80DE-233B2D3F5516}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Application", "Banking\Banking.Application\Banking.Application.csproj", "{30DB2E2F-CA5B-43CF-BCA2-27BE0ADE7128}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banking.Application", "Banking\Banking.Application\Banking.Application.csproj", "{30DB2E2F-CA5B-43CF-BCA2-27BE0ADE7128}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Persistence", "Banking\Banking.Persistence\Banking.Persistence.csproj", "{DC97256A-69A8-43D4-9107-C305EA20F3DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banking.Persistence", "Banking\Banking.Persistence\Banking.Persistence.csproj", "{DC97256A-69A8-43D4-9107-C305EA20F3DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banking.Api", "Banking\Banking.Api\Banking.Api.csproj", "{7379666C-ADDA-4267-B2DE-E79AB71203AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banking.Api", "Banking\Banking.Api\Banking.Api.csproj", "{7379666C-ADDA-4267-B2DE-E79AB71203AC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transactions", "Transactions", "{D82851B4-BFFA-4082-AA44-2279A0093512}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transactions.Domain", "Transactions\Transactions.Domain\Transactions.Domain.csproj", "{3CD98EFA-EA13-4B14-88B4-48A1E1B140D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transactions.Domain", "Transactions\Transactions.Domain\Transactions.Domain.csproj", "{3CD98EFA-EA13-4B14-88B4-48A1E1B140D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transactions.Application", "Transactions\Transactions.Application\Transactions.Application.csproj", "{DC9565D5-03FA-4268-963F-50DF25C4E067}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transactions.Application", "Transactions\Transactions.Application\Transactions.Application.csproj", "{DC9565D5-03FA-4268-963F-50DF25C4E067}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transactions.Persistance", "Transactions\Transactions.Persistance\Transactions.Persistance.csproj", "{0851A552-4193-4548-9AB6-3C98328EDDB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transactions.Persistance", "Transactions\Transactions.Persistance\Transactions.Persistance.csproj", "{0851A552-4193-4548-9AB6-3C98328EDDB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transactions.Infrastructure", "Transactions\Transactions.Infrastructure\Transactions.Infrastructure.csproj", "{B5FC6527-7D98-4581-9BA9-170B553DCE1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transactions.Infrastructure", "Transactions\Transactions.Infrastructure\Transactions.Infrastructure.csproj", "{B5FC6527-7D98-4581-9BA9-170B553DCE1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transactions.Api", "Transactions\Transactions.Api\Transactions.Api.csproj", "{E26CBC36-19CD-4D46-8E2D-1708F1B3952A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transactions.Api", "Transactions\Transactions.Api\Transactions.Api.csproj", "{E26CBC36-19CD-4D46-8E2D-1708F1B3952A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{DEC22896-69C9-4A94-8710-FB4E5402FB35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Games.Domain", "Games\Games.Domain\Games.Domain.csproj", "{FEDC30FF-3A9C-43AD-928D-137190D17232}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Games.Domain", "Games\Games.Domain\Games.Domain.csproj", "{FEDC30FF-3A9C-43AD-928D-137190D17232}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Games.Application", "Games\Games.Application\Games.Application.csproj", "{B7A051C4-5776-4756-9B39-B96922A46F63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Games.Application", "Games\Games.Application\Games.Application.csproj", "{B7A051C4-5776-4756-9B39-B96922A46F63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Games.Persistence", "Games\Games.Persistence\Games.Persistence.csproj", "{0DB32F5C-78DC-40E6-BB9D-EB8A21D3C72E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Games.Persistence", "Games\Games.Persistence\Games.Persistence.csproj", "{0DB32F5C-78DC-40E6-BB9D-EB8A21D3C72E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Games.Api", "Games\Games.Api\Games.Api.csproj", "{B2721043-8FB3-448A-99ED-375FF057A177}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Games.Api", "Games\Games.Api\Games.Api.csproj", "{B2721043-8FB3-448A-99ED-375FF057A177}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{86E4D6A5-2407-42D9-AC9F-4610A0C5FF15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.Domain", "Users\Users.Domain\Users.Domain.csproj", "{56AD4E57-ED3A-484F-A5E4-4ACE39FEE746}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Domain", "Users\Users.Domain\Users.Domain.csproj", "{56AD4E57-ED3A-484F-A5E4-4ACE39FEE746}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.Application", "Users\Users.Application\Users.Application.csproj", "{CD31C070-AE0D-473C-8E55-95B5136B17DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Application", "Users\Users.Application\Users.Application.csproj", "{CD31C070-AE0D-473C-8E55-95B5136B17DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.Api", "Users\Users.Api\Users.Api.csproj", "{382E1488-AB61-4594-8238-F5FB12B6F32C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Api", "Users\Users.Api\Users.Api.csproj", "{382E1488-AB61-4594-8238-F5FB12B6F32C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.Persistence", "Users\Users.Persistence\Users.Persistence.csproj", "{81260209-A367-44E4-B7BC-EE22F7CD8F7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks.Api", "BuildingBlocks\BuildingBlocks.Api\BuildingBlocks.Api.csproj", "{22204021-3C86-4A95-A2B2-BB60D2E8F6B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Persistence", "Users\Users.Persistence\Users.Persistence.csproj", "{D79CC6B0-4DEB-4A1E-BE96-E85E27FB8984}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,10 +69,6 @@ Global
 		{1EEE0DB5-BA04-41F5-9947-1D7094B69F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EEE0DB5-BA04-41F5-9947-1D7094B69F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EEE0DB5-BA04-41F5-9947-1D7094B69F69}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7244E252-42E2-4C48-AEB4-CCDB88DAB293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7244E252-42E2-4C48-AEB4-CCDB88DAB293}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7244E252-42E2-4C48-AEB4-CCDB88DAB293}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7244E252-42E2-4C48-AEB4-CCDB88DAB293}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FEB270E3-3488-4D85-8949-4EA2DF48A7DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FEB270E3-3488-4D85-8949-4EA2DF48A7DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEB270E3-3488-4D85-8949-4EA2DF48A7DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -141,10 +137,14 @@ Global
 		{382E1488-AB61-4594-8238-F5FB12B6F32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{382E1488-AB61-4594-8238-F5FB12B6F32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{382E1488-AB61-4594-8238-F5FB12B6F32C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{81260209-A367-44E4-B7BC-EE22F7CD8F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81260209-A367-44E4-B7BC-EE22F7CD8F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81260209-A367-44E4-B7BC-EE22F7CD8F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{81260209-A367-44E4-B7BC-EE22F7CD8F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22204021-3C86-4A95-A2B2-BB60D2E8F6B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22204021-3C86-4A95-A2B2-BB60D2E8F6B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22204021-3C86-4A95-A2B2-BB60D2E8F6B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22204021-3C86-4A95-A2B2-BB60D2E8F6B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D79CC6B0-4DEB-4A1E-BE96-E85E27FB8984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D79CC6B0-4DEB-4A1E-BE96-E85E27FB8984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D79CC6B0-4DEB-4A1E-BE96-E85E27FB8984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D79CC6B0-4DEB-4A1E-BE96-E85E27FB8984}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -152,7 +152,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C34C17DD-D601-4BC1-981E-F77D90E36108} = {EE205632-B8BE-47CE-A872-5AD6CC58483B}
 		{1EEE0DB5-BA04-41F5-9947-1D7094B69F69} = {EE205632-B8BE-47CE-A872-5AD6CC58483B}
-		{7244E252-42E2-4C48-AEB4-CCDB88DAB293} = {EE205632-B8BE-47CE-A872-5AD6CC58483B}
 		{FEB270E3-3488-4D85-8949-4EA2DF48A7DD} = {EE205632-B8BE-47CE-A872-5AD6CC58483B}
 		{244AD7DF-BFB1-4B9C-80DE-233B2D3F5516} = {E80AAF7F-8B6C-47BA-93AE-AF43E7CEF4D9}
 		{30DB2E2F-CA5B-43CF-BCA2-27BE0ADE7128} = {E80AAF7F-8B6C-47BA-93AE-AF43E7CEF4D9}
@@ -170,7 +169,8 @@ Global
 		{56AD4E57-ED3A-484F-A5E4-4ACE39FEE746} = {86E4D6A5-2407-42D9-AC9F-4610A0C5FF15}
 		{CD31C070-AE0D-473C-8E55-95B5136B17DE} = {86E4D6A5-2407-42D9-AC9F-4610A0C5FF15}
 		{382E1488-AB61-4594-8238-F5FB12B6F32C} = {86E4D6A5-2407-42D9-AC9F-4610A0C5FF15}
-		{81260209-A367-44E4-B7BC-EE22F7CD8F7F} = {86E4D6A5-2407-42D9-AC9F-4610A0C5FF15}
+		{22204021-3C86-4A95-A2B2-BB60D2E8F6B9} = {EE205632-B8BE-47CE-A872-5AD6CC58483B}
+		{D79CC6B0-4DEB-4A1E-BE96-E85E27FB8984} = {86E4D6A5-2407-42D9-AC9F-4610A0C5FF15}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2481C55E-DA31-483A-9249-52C986E182D7}
