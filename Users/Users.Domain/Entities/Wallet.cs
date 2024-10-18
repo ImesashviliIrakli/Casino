@@ -13,11 +13,11 @@ public class Wallet : Entity
     // Foreign Key for the Player
     [ForeignKey("UserId")]
     public string PlayerUserId { get; private set; }
-    public Player? Player { get; set; }
+    public ApplicationUser? User { get; set; }
 
     public Wallet() { }
 
-    public void Create(Currency currency, string playerUserId)
+    public Wallet(Currency currency, string playerUserId)
     {
         Id = Guid.NewGuid();    
         Balance = 0;

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using BuildingBlocks.Domain.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace Users.Application.Models;
 
@@ -16,6 +17,9 @@ public class RegistrationRequest
 
     [Required]
     public required string SID { get; set; }
+
+    [Required]
+    public Roles Role { get; set; }
 
     [Required]
     [MinLength(6)]

@@ -20,6 +20,12 @@ public class RoleConfiguration : IEntityTypeConfiguration<IdentityRole>
                 Id = "cbc43a8e-f7bb-4445-baaf-1add431ffbbf",
                 Name = "Player",
                 NormalizedName = "PLAYER"
+            },
+            new IdentityRole
+            {
+                Id = "cbc43a8e-f7bb-4445-baaf-1add431ffbb3",
+                Name = "TestPlayer",
+                NormalizedName = "TESTPLAYER"
             }
         );
     }

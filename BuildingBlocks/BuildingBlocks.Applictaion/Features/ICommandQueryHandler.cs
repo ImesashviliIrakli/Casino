@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using BuildingBlocks.Domain.Shared;
+using MediatR;
 
 namespace BuildingBlocks.Applictaion.Features;
 
