@@ -1,4 +1,5 @@
 ﻿using BuildingBlocks.Applictaion.Interfaces;
+using Microsoft.EntityFrameworkCore.Storage;
 using System.Data;
 using Users.Persistence.Data;
 
@@ -14,4 +15,11 @@ public class UnitOfWork : IUnitOfWork
     }
 
     public Task SaveChangesAsync(CancellationToken cancellationToken = default) => _context.SaveChangesAsync(cancellationToken);
+
+    public IDbTransaction BeginTransaction()
+    {
+        var transaction = _context.Database.BeginTransaction();
+
+        return transaction.GetDbTransaction();
+    }
 }

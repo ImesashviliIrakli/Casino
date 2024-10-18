@@ -1,6 +1,4 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace BuildingBlocks.Domain.Shared;
+﻿namespace BuildingBlocks.Domain.Shared;
 
 public class Result
 {

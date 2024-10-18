@@ -3,7 +3,6 @@ using BuildingBlocks.Applictaion.Interfaces;
 using BuildingBlocks.Applictaion.Middleware;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 using Users.Application.Interfaces;
 using Users.Applictaion;
 using Users.Domain.Entities;
@@ -25,7 +24,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
             .AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
-builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IWalletRepository, WalletRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddTransient<GlobalExceptionHandlingMiddleware>();
