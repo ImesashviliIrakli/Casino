@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using BuildingBlocks.Domain.Errors;
+using BuildingBlocks.Domain.Shared;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Text.Json;
@@ -27,15 +28,9 @@ public class GlobalExceptionHandlingMiddleware : IMiddleware
 
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-            ProblemDetails problem = new()
-            {
-                Status = (int)HttpStatusCode.InternalServerError,
-                Type = "Server error",
-                Title = "Server error",
-                Detail = "An internal server has occured"
-            };
+            var result = Result.Failure(GlobalErrors.SystemFailure(ex.Message));
 
-            string json = JsonSerializer.Serialize(problem);
+            string json = JsonSerializer.Serialize(result);
 
             context.Response.ContentType = "application/json";
 

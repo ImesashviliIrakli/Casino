@@ -1,4 +1,4 @@
-﻿namespace BuildingBlocks.Application;
+﻿namespace Users.Application.Options;
 
 public class JwtOptions
 {

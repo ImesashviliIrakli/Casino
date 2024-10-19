@@ -19,32 +19,32 @@ public class BuildingBlocksBaseServiceInstaller : IServiceInstaller
         services.AddControllers();
         services.AddEndpointsApiExplorer();
 
-        services.AddSwaggerGen(x =>
-        {
-            x.AddSecurityDefinition(name: "Bearer", securityScheme: new OpenApiSecurityScheme
-            {
-                Name = "Authorization",
-                Description = "Enter the bearer authorization string as following: `Bearer Generated JWT TOKEN`",
-                In = ParameterLocation.Header,
-                Type = SecuritySchemeType.ApiKey,
-                Scheme = "Bearer"
-            });
+        //services.AddSwaggerGen(x =>
+        //{
+        //    x.AddSecurityDefinition(name: "Bearer", securityScheme: new OpenApiSecurityScheme
+        //    {
+        //        Name = "Authorization",
+        //        Description = "Enter the bearer authorization string as following: `Bearer Generated JWT TOKEN`",
+        //        In = ParameterLocation.Header,
+        //        Type = SecuritySchemeType.ApiKey,
+        //        Scheme = "Bearer"
+        //    });
 
-            x.AddSecurityRequirement(new OpenApiSecurityRequirement
-            {
-                {
-                    new OpenApiSecurityScheme
-                    {
-                        Reference = new OpenApiReference
-                        {
-                            Type = ReferenceType.SecurityScheme,
-                            Id = JwtBearerDefaults.AuthenticationScheme
-                        }
-                    }, new string[]{ }
-                }
-            });
+        //    x.AddSecurityRequirement(new OpenApiSecurityRequirement
+        //    {
+        //        {
+        //            new OpenApiSecurityScheme
+        //            {
+        //                Reference = new OpenApiReference
+        //                {
+        //                    Type = ReferenceType.SecurityScheme,
+        //                    Id = JwtBearerDefaults.AuthenticationScheme
+        //                }
+        //            }, new string[]{ }
+        //        }
+        //    });
 
-        });
+        //});
 
         services.AddAuthentication(options =>
         {
@@ -65,8 +65,6 @@ public class BuildingBlocksBaseServiceInstaller : IServiceInstaller
 
             };
         });
-
-        services.Configure<JwtOptions>(configuration.GetSection("JwtOptions"));
 
         services.AddCors(options =>
         {

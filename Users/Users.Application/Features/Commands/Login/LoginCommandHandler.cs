@@ -6,8 +6,8 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using Users.Application.Interfaces;
 using Users.Application.Models;
+using Users.Application.Options;
 using Users.Domain.Entities;
 using Users.Domain.Errors;
 

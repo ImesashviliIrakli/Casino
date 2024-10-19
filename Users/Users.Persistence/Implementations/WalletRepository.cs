@@ -1,4 +1,5 @@
-﻿using Users.Application.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using Users.Application.Interfaces;
 using Users.Domain.Entities;
 using Users.Persistence.Data;
 
@@ -12,4 +13,17 @@ public class WalletRepository : IWalletRepository
         _context = context;
     }
     public async Task AddAsync(Wallet wallet) => await _context.Wallets.AddAsync(wallet);
+
+    public async Task DeleteAsync(Wallet wallet)
+    {
+        await Task.Run(() =>
+        {
+            _context.Wallets.Remove(wallet);
+        });
+    }
+
+    public async Task<Wallet> GetWalletByUserId(string userId)
+    {
+        return await _context.Wallets.FirstOrDefaultAsync(x => x.PlayerUserId.Equals(userId));
+    }
 }
