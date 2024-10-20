@@ -1,17 +1,9 @@
-using BuildingBlocks.Applictaion.Interfaces;
 using BuildingBlocks.Applictaion.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using Users.Api.Configs;
-using Users.Application.Interfaces;
-using Users.Application.Options;
-using Users.Applictaion;
-using Users.Domain.Entities;
-using Users.Persistence.Data;
-using Users.Persistence.Implementations;
+using Users.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -69,6 +61,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddTransient<GlobalExceptionHandlingMiddleware>();
 
+builder.Services.AddGrpc();
 
 var app = builder.Build();
 
@@ -90,5 +83,6 @@ app.UseAuthorization();
 app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
 
 app.MapControllers();
+app.MapGrpcService<WalletService>();
 
 app.Run();
