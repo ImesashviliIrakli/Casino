@@ -19,10 +19,15 @@ public class Wallet : Entity
 
     public Wallet(Currency currency, string playerUserId)
     {
-        Id = Guid.NewGuid();    
+        Id = Guid.NewGuid();
         Balance = 0;
         Currency = currency;
         PlayerUserId = playerUserId;
+    }
+
+    public void ChangeCurrency(Currency currency)
+    {
+        Currency = currency;
     }
 
     public void AddToBalance(decimal amount)
@@ -38,7 +43,7 @@ public class Wallet : Entity
         if (amount <= 0)
             throw new ConflictException("Amount can not be less than or equal 0");
 
-        if((Balance - amount) < 0)
+        if ((Balance - amount) < 0)
             throw new ConflictException("Not enough funds");
 
         Balance -= amount;
