@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+
+   # rabbitmq:
+   #  image: rabbitmq:3-management
+   #  hostname: rabbitmq
+   #  container_name: rabbitmq
+   #  ports:
+   #    - "5672:5672"
+   #    - "15672:15672"
+ 
+   # seq:
+   #  image: datalust/seq:latest
+   #  container_name: seq
+   #  hostname: seq
+   #  environment:
+   #    - ACCEPT_EULA=Y
+   #  ports:
+   #    - 5341:80
+
+   identityservice:
+    build:
+      context: .
+      dockerfile: Users/Users.Api/Dockerfile
+    container_name: users.api
+    restart: on-failure
+    ports:
+      - "5001:8080"
+      - "5002:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - SSMS_CONNECTION_STRING=Server=host.docker.internal,1433;Database=${USERS_DB};TrustServerCertificate=True;

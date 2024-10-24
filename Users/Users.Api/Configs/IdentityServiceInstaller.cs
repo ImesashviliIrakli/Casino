@@ -18,8 +18,10 @@ public class IdentityServiceInstaller : IServiceInstaller
     {
         services.Configure<JwtOptions>(configuration.GetSection("JwtOptions"));
 
+        var connectionString = configuration["SSMS_CONNECTION_STRING"];
+
         services.AddDbContext<AppDbContext>(options =>
-           options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+           options.UseSqlServer(connectionString));
 
         services.AddIdentity<ApplicationUser, IdentityRole>()
             .AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
