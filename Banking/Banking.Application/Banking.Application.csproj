@@ -6,4 +6,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Deposit\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BuildingBlocks\BuildingBlocks.Applictaion\BuildingBlocks.Applictaion.csproj" />
+    <ProjectReference Include="..\Banking.Domain\Banking.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

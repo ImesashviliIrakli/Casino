@@ -83,6 +83,7 @@ app.UseAuthorization();
 app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
 
 app.MapControllers();
+
 app.MapGrpcService<WalletService>();
 
 app.Run();

@@ -1,6 +1,6 @@
 ﻿namespace BuildingBlocks.Domain.Enums;
 
-public enum  PaymentSystemType
+public enum  PaymentDirection
 {
     Deposit = 1,
     Withdraw = 2

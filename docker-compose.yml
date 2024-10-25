@@ -19,7 +19,7 @@ services:
    #  ports:
    #    - 5341:80
 
-   identityservice:
+   users:
     build:
       context: .
       dockerfile: Users/Users.Api/Dockerfile

@@ -5,12 +5,13 @@ namespace Banking.Domain.Entities;
 
 public class PaymentSystem : Entity
 {
-    public string BankName { get; private set; }
-    public string BankDescription { get; private set; }
+    public string Name { get; private set; }
+    public string Description { get; private set; }
     public decimal MinimumLimit { get; private set; }
     public decimal MaximumLimit { get; private set; }
-    public PaymentSystemType PaymentSystemType { get; private set; }
+    public PaymentDirection PaymentDirection { get; private set; }
     public bool IsTest { get; private set; }
+    public bool IsDisabled { get; private set; } = false;
     public string ImageUrl { get; private set; }
 
     public PaymentSystem()
@@ -18,37 +19,40 @@ public class PaymentSystem : Entity
     }
 
     public PaymentSystem(
-        string bankName,
-        string bankDescription,
+        string name,
+        string description,
         decimal minimumLimit,
         decimal maximumLimit,
-        PaymentSystemType paymentType,
+        PaymentDirection paymentDirection,
         bool isTest,
-        string imageUrl)
+        string imageUrl
+        )
     {
         Id = Guid.NewGuid();
-        BankName = bankName;
-        BankDescription = bankDescription;
+        Name = name;
+        Description = description;
         MinimumLimit = minimumLimit;
         MaximumLimit = maximumLimit;
-        PaymentSystemType = paymentType;
+        PaymentDirection = paymentDirection;
         IsTest = isTest;
         ImageUrl = imageUrl;
     }
 
-    public void UpdateBankDetails(
-        string bankName,
-        string bankDescription,
+    public void UpdateDetails(
+        string name,
+        string description,
         decimal minimumLimit,
         decimal maximumLimit,
-        PaymentSystemType paymentType)
+        PaymentDirection paymentDirection)
     {
-        BankName = bankName;
-        BankDescription = bankDescription;
+        Name = name;
+        Description = description;
         MinimumLimit = minimumLimit;
         MaximumLimit = maximumLimit;
-        PaymentSystemType = paymentType;
+        PaymentDirection = paymentDirection;
     }
+
+    public void UpdateIsDisabled(bool isDisabled) => IsDisabled = isDisabled;
 
     public void UpdateIsTest(bool isTest) => IsTest = isTest;
 
