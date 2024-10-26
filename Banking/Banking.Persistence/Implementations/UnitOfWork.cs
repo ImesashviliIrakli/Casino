@@ -1,17 +1,24 @@
-﻿using BuildingBlocks.Applictaion.Interfaces;
+﻿using Banking.Persistence.Data;
+using BuildingBlocks.Applictaion.Interfaces;
+using Microsoft.EntityFrameworkCore.Storage;
 using System.Data;
 
 namespace Banking.Persistence.Implementations;
 
 public class UnitOfWork : IUnitOfWork
 {
-    public IDbTransaction BeginTransaction()
+    private readonly AppDbContext _context;
+    public UnitOfWork(AppDbContext context)
     {
-        throw new NotImplementedException();
+        _context = context;
     }
 
-    public Task SaveChangesAsync(CancellationToken cancellationToken = default)
+    public Task SaveChangesAsync(CancellationToken cancellationToken = default) => _context.SaveChangesAsync(cancellationToken);
+
+    public IDbTransaction BeginTransaction()
     {
-        throw new NotImplementedException();
+        var transaction = _context.Database.BeginTransaction();
+
+        return transaction.GetDbTransaction();
     }
 }

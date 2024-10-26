@@ -31,3 +31,15 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - SSMS_CONNECTION_STRING=Server=host.docker.internal,1433;Database=${USERS_DB};TrustServerCertificate=True;
+   banking:
+    build:
+      context: .
+      dockerfile: Bankink/Banking.Api/Dockerfile
+    container_name: users.api
+    restart: on-failure
+    ports:
+      - "5003:8080"
+      - "5004:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - POSTGRES_CONNECTION_STRING=Host=${POSTGRE_DB_HOST};Port=${POSTGRE_DB_PORT};Database=${BANKING_DB};Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}

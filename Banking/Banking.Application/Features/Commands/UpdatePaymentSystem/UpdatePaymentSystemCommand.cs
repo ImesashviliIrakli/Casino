@@ -13,8 +13,10 @@ public class UpdatePaymentSystemCommand : ICommandQuery
     [Required]
     public required string Description { get; set; }
     [Required]
+    [Range(1, 100000)]
     public decimal MinimumLimit { get; set; }
     [Required]
+    [Range(1, 100000)]
     public decimal MaximumLimit { get; set; }
     [Required]
     public PaymentDirection PaymentDirection { get; set; }

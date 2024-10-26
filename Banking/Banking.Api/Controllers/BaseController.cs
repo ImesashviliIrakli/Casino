@@ -14,11 +14,11 @@ public abstract class BaseController : ControllerBase
         switch (result.Error.Code)
         {
             case "NotFound":
-                return NotFound(result.Error);
+                return NotFound(result);
             case "BadRequest":
-                return BadRequest(result.Error);
+                return BadRequest(result);
             default:
-                return StatusCode(500, result.Error);
+                return StatusCode(500, result);
 
         }
     }

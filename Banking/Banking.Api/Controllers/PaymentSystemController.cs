@@ -14,7 +14,7 @@ namespace Banking.Api.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-[Authorize]
+[Authorize(Roles = "Admin")]
 public class PaymentSystemController : BaseController
 {
     private readonly IMediator _mediator;
@@ -24,6 +24,7 @@ public class PaymentSystemController : BaseController
     }
 
     [HttpGet]
+    [AllowAnonymous]
     public async Task<IActionResult> Get([FromQuery] PaymentDirection paymentDirection)
     {
         bool includeTestPaymentSystems = GetCurrentUserRole() == Roles.TestPlayer.ToString();

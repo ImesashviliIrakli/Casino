@@ -18,7 +18,7 @@ public class IdentityServiceInstaller : IServiceInstaller
     {
         services.Configure<JwtOptions>(configuration.GetSection("JwtOptions"));
 
-        var connectionString = configuration["SSMS_CONNECTION_STRING"];
+        var connectionString = configuration.GetConnectionString("DefaultConnection"); //configuration["SSMS_CONNECTION_STRING"];
 
         services.AddDbContext<AppDbContext>(options =>
            options.UseSqlServer(connectionString));

@@ -8,4 +8,9 @@ public static class BankingDomainErrors
             "NotFound",
             $"Payment system not found."
             );
+
+    public static readonly Error UnsupportedDirection = new(
+            "BadRequest",
+            $"Payment direction is not supported."
+            );
 }

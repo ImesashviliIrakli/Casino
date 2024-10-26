@@ -2,6 +2,7 @@
 using Banking.Domain.Errors;
 using BuildingBlocks.Applictaion.Features;
 using BuildingBlocks.Applictaion.Interfaces;
+using BuildingBlocks.Domain.Enums;
 using BuildingBlocks.Domain.Shared;
 
 namespace Banking.Application.Features.Commands.UpdatePaymentSystem;
@@ -17,6 +18,9 @@ public class UpdatePaymentSystemCommandHandler : ICommandQueryHandler<UpdatePaym
     }
     public async Task<Result> Handle(UpdatePaymentSystemCommand request, CancellationToken cancellationToken)
     {
+        if (!Enum.IsDefined(typeof(PaymentDirection), request.PaymentDirection))
+            return Result.Failure(BankingDomainErrors.UnsupportedDirection);
+
         var paymentSystem = await _paymentSystemRepository.GetPaymentSystemByIdAsync(request.PaymentSystemId, cancellationToken);
 
         if (paymentSystem is null)
