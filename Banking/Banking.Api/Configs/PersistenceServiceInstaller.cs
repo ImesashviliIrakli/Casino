@@ -17,6 +17,7 @@ public class PersistenceServiceInstaller : IServiceInstaller
         });
 
         services.AddScoped<IPaymentSystemRepository, PaymentSystemRepository>();
+        services.AddScoped<IPaymentRequestRepository, PaymentRequestRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
     }
 }

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "Users.Api.Grpc";
+
+service WalletManager{
+	rpc GetWallet(GetWalletRequest) returns (GetWalletResponse);
+}
+
+message GetWalletRequest {
+    string userId = 1;
+}
+
+message GetWalletResponse {
+    string userId = 1;
+    string balance = 2;
+    string currency = 3;
+}

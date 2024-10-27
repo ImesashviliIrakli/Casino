@@ -37,4 +37,15 @@ public class PaymentSystemRepository : IPaymentSystemRepository
 
         return paymentSystems;
     }
+
+    public async Task<(decimal, decimal)> GetPaymentSystemLimitsAsync(Guid paymentSystemId, CancellationToken cancellationToken)
+    {
+        var limits = await _context.PaymentSystems
+            .Where(x => x.Id.Equals(paymentSystemId))
+            .Select(x => new { x.MinimumLimit, x.MaximumLimit })
+            .FirstOrDefaultAsync(cancellationToken);
+
+        return (limits.MinimumLimit, limits.MaximumLimit);
+
+    }
 }

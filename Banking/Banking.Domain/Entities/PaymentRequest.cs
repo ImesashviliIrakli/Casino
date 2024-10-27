@@ -15,6 +15,7 @@ public class PaymentRequest : Entity
     public Currency Currency { get; private set; }
     public PaymentDirection PaymentDirection { get; private set; }
     public TransactionStatus Status { get; private set; } 
+    public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;
 
     public PaymentRequest()
     { }

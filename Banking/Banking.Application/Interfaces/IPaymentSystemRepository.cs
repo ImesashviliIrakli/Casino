@@ -7,6 +7,7 @@ public interface IPaymentSystemRepository
 {
     Task<List<PaymentSystem>> GetPaymentSystemsAsync(PaymentDirection paymentDirection, bool includeTestPaymentSystems, CancellationToken cancellationToken);
     Task<PaymentSystem> GetPaymentSystemByIdAsync(Guid paymentSystemId, CancellationToken cancellationToken);
+    Task<(decimal, decimal)> GetPaymentSystemLimitsAsync(Guid paymentSystemId, CancellationToken cancellationToken);
     Task AddAsync(PaymentSystem paymentSystem, CancellationToken cancellationToken);
     Task DeleteAsync(PaymentSystem paymentSystem, CancellationToken cancellationToken);
 }
