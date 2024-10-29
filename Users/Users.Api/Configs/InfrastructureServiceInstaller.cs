@@ -1,8 +1,8 @@
 ﻿
 using BuildingBlocks.Applictaion.Interfaces;
 using RabbitMQ.Client;
-using Users.Application.Models.PaymentRequest;
 using Users.Infrastructure.BackgroundServices;
+using Users.Infrastructure.Handlers;
 using Users.Infrastructure.Messages;
 
 namespace Users.Api.Configs;
@@ -18,13 +18,15 @@ public class InfrastructureServiceInstaller : IServiceInstaller
                 HostName = "localhost",
                 UserName = "guest",
                 Password = "guest",
-                // Optional additional settings
                 VirtualHost = "/",
                 Port = AmqpTcpEndpoint.UseDefaultPort
             };
         });
-        services.AddSingleton<IMessageConsumer<PaymentRequestDto>, RabbitMqMessageConsumer<PaymentRequestDto>>();
-        services.AddHostedService<RabbitMqBackgroundService<PaymentRequestDto>>();
 
+        services.AddSingleton(typeof(IMessageConsumer<>), typeof(RabbitMqMessageConsumer<>));
+
+        services.AddHostedService<PaymentRequestBackgroundService>();
+
+        services.AddScoped<PaymentRequestMessageHandler>();
     }
 }

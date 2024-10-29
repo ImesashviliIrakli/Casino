@@ -18,7 +18,6 @@ public class RabbitMqMessageConsumer<T> : IMessageConsumer<T>
 
     public Task ConsumeAsync(Func<T, Task> onMessageReceived, string queueName, CancellationToken cancellation = default)
     {
-        _channel.QueueDeclare(queue: queueName, durable: true, exclusive: false, autoDelete: false, arguments: null);
         var consumer = new AsyncEventingBasicConsumer(_channel);
 
         consumer.Received += async (model, ea) =>
@@ -28,9 +27,7 @@ public class RabbitMqMessageConsumer<T> : IMessageConsumer<T>
             var message = JsonSerializer.Deserialize<T>(body);
 
             if (message != null)
-            {
                 await onMessageReceived(message);
-            }
 
             _channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
         };
