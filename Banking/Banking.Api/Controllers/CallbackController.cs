@@ -1,4 +1,5 @@
 ﻿using Banking.Application.Deposit.EndBOGDeposit;
+using Banking.Application.WIthdraw.EndBOGWithdraw;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +17,14 @@ public class CallbackController : BaseController
 
     [HttpPost("EndBOGDeposit")]
     public async Task<IActionResult> EndBOGDeposit(EndBOGDepositCommand command)
+    {
+        var data = await _mediator.Send(command);
+
+        return CreateResponse(data);
+    }
+
+    [HttpPost("EndBOGWithdraw")]
+    public async Task<IActionResult> EndBOGWithdraw(EndBOGWithdrawCommand command)
     {
         var data = await _mediator.Send(command);
 
