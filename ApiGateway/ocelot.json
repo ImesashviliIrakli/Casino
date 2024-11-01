@@ -1,16 +1,16 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5100"
+    "BaseUrl": "http://host.docker.internal:5100"
   },
   "Routes": [
     {
       "UpstreamPathTemplate": "/gateway/payment-systems",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamPathTemplate": "/api/PaymentSystem",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "host.docker.internal",
           "Port": 5003
         }
       ]
@@ -22,7 +22,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "host.docker.internal",
           "Port": 5003
         }
       ]
@@ -31,10 +31,10 @@
       "UpstreamPathTemplate": "/gateway/payment-systems",
       "UpstreamHttpMethod": [ "POST" ],
       "DownstreamPathTemplate": "/api/PaymentSystem",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "host.docker.internal",
           "Port": 5003
         }
       ]
@@ -43,10 +43,10 @@
       "UpstreamPathTemplate": "/gateway/payment-systems",
       "UpstreamHttpMethod": [ "PUT" ],
       "DownstreamPathTemplate": "/api/PaymentSystem",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "host.docker.internal",
           "Port": 5003
         }
       ]
@@ -55,10 +55,10 @@
       "UpstreamPathTemplate": "/gateway/payment-systems/DisablePaymentSystem",
       "UpstreamHttpMethod": [ "PATCH" ],
       "DownstreamPathTemplate": "/api/PaymentSystem/DisablePaymentSystem",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "host.docker.internal",
           "Port": 5003
         }
       ]
@@ -67,10 +67,10 @@
       "UpstreamPathTemplate": "/gateway/payment-systems/TestModePaymentSystem",
       "UpstreamHttpMethod": [ "PATCH" ],
       "DownstreamPathTemplate": "/api/PaymentSystem/TestModePaymentSystem",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "host.docker.internal",
           "Port": 5003
         }
       ]
@@ -79,10 +79,10 @@
       "UpstreamPathTemplate": "/gateway/payment-systems/{paymentSystemId}",
       "UpstreamHttpMethod": [ "DELETE" ],
       "DownstreamPathTemplate": "/api/PaymentSystem/{paymentSystemId}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "host.docker.internal",
           "Port": 5003
         }
       ]
@@ -91,10 +91,10 @@
       "UpstreamPathTemplate": "/gateway/payment-requests/",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamPathTemplate": "/api/PaymentRequest/",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "host.docker.internal",
           "Port": 5003
         }
       ]
@@ -103,10 +103,10 @@
       "UpstreamPathTemplate": "/gateway/payment-requests/{paymentRequestId}",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamPathTemplate": "/api/PaymentRequest/{paymentRequestId}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "host.docker.internal",
           "Port": 5003
         }
       ]

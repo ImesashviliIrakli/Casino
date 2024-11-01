@@ -12,8 +12,8 @@ public class PersistenceServiceInstaller : IServiceInstaller
     {
         services.AddDbContext<AppDbContext>(options =>
         {
-            //options.UseNpgsql(configuration["POSTGRES_CONNECTION_STRING"]);
-            options.UseNpgsql(configuration.GetConnectionString("POSTGRES_CONNECTION_STRING"));
+            options.UseNpgsql(configuration["POSTGRES_CONNECTION_STRING"]);
+            //options.UseNpgsql(configuration.GetConnectionString("POSTGRES_CONNECTION_STRING"));
         });
 
         services.AddScoped<IPaymentSystemRepository, PaymentSystemRepository>();

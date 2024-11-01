@@ -12,7 +12,12 @@ public class InfrastructureServiceInstaller : IServiceInstaller
     {
         services.AddGrpcClient<WalletManager.WalletManagerClient>("Wallet", o =>
         {
-            o.Address = new Uri(configuration["GrpcSettings:UsersGrpcServiceUrl"]);
+            var usersGrpcUri = configuration["USERS_GRPC_SERVICE_URL"];
+
+            if (usersGrpcUri is null)
+                throw new Exception("Missing uri");
+
+            o.Address = new Uri(usersGrpcUri);
         });
 
         services.AddScoped<IWalletGrpcService, WalletGrpcService>();

@@ -3,7 +3,7 @@ using RabbitMQ.Client;
 
 Console.WriteLine("Hello, World!");
 
-var factory = new ConnectionFactory { Uri = new Uri("amqp://guest:guest@localhost:5672/") };
+var factory = new ConnectionFactory { Uri = new Uri("amqp://guest:guest@host.docker.internal:5672/") };
 using var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();
 
