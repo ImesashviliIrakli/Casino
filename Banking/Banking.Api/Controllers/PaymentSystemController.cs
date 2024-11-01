@@ -47,7 +47,7 @@ public class PaymentSystemController : BaseController
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreatePaymentSystem(CreatePaymentSystemCommand command)
+    public async Task<IActionResult> Post(CreatePaymentSystemCommand command)
     {
         var data = await _mediator.Send(command);
 
@@ -55,7 +55,7 @@ public class PaymentSystemController : BaseController
     }
 
     [HttpPut]
-    public async Task<IActionResult> UpdatePaymentSystemDetails(UpdatePaymentSystemCommand command)
+    public async Task<IActionResult> Put(UpdatePaymentSystemCommand command)
     {
         var data = await _mediator.Send(command);
 
@@ -79,7 +79,7 @@ public class PaymentSystemController : BaseController
     }
 
     [HttpDelete("{paymentSystemId}")]
-    public async Task<IActionResult> DeletePaymentSystem(Guid paymentSystemId)
+    public async Task<IActionResult> Delete(Guid paymentSystemId)
     {
         var command = new DeletePaymentSystemCommand(paymentSystemId);
 

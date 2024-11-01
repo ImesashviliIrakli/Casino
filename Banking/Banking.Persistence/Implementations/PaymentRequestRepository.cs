@@ -22,7 +22,7 @@ public class PaymentRequestRepository : IPaymentRequestRepository
 
     public async Task<PaymentRequest> GetPaymentRequestByIdAsync(Guid paymentRequestId, CancellationToken cancellationToken = default)
     {
-        var paymentRequest = await _context.PaymentRequests.FirstOrDefaultAsync(x => x.Id.Equals(paymentRequestId));
+        var paymentRequest = await _context.PaymentRequests.Include(x => x.PaymentSystem).FirstOrDefaultAsync(x => x.Id.Equals(paymentRequestId), cancellationToken);
 
         return paymentRequest;
     }

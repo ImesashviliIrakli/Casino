@@ -11,8 +11,8 @@ public class FilterParameters
 
     public FilterParameters(DateTime start, DateTime end, OrderType orderType = default, int page = 0, int pageSize = 20)
     {
-        Start = start;
-        End = end;
+        Start = DateTime.SpecifyKind(start, DateTimeKind.Utc);
+        End = DateTime.SpecifyKind(end, DateTimeKind.Utc);
         OrderType = orderType;
         Page = page;
         PageSize = pageSize;
