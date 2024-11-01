@@ -26,7 +26,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\BuildingBlocks\BuildingBlocks.Applictaion\BuildingBlocks.Applictaion.csproj" />
 		<ProjectReference Include="..\Users.Infrastructure\Users.Infrastructure.csproj" />
 		<ProjectReference Include="..\Users.Persistence\Users.Persistence.csproj" />
 	</ItemGroup>

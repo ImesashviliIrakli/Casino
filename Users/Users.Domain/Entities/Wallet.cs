@@ -1,5 +1,4 @@
-﻿using BuildingBlocks.Application.Exceptions;
-using BuildingBlocks.Domain.Enums;
+﻿using BuildingBlocks.Domain.Enums;
 using BuildingBlocks.Domain.Primitives;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -33,7 +32,7 @@ public class Wallet : Entity
     public void AddToBalance(decimal amount)
     {
         if (amount <= 0)
-            throw new ConflictException("Amount can not be less than or equal 0");
+            throw new Exception("Amount can not be less than or equal 0");
 
         Balance += amount;
     }
@@ -41,10 +40,10 @@ public class Wallet : Entity
     public void RemoveFromBalance(decimal amount)
     {
         if (amount <= 0)
-            throw new ConflictException("Amount can not be less than or equal 0");
+            throw new Exception("Amount can not be less than or equal 0");
 
         if ((Balance - amount) < 0)
-            throw new ConflictException("Not enough funds");
+            throw new Exception("Not enough funds");
 
         Balance -= amount;
     }
