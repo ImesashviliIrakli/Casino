@@ -5,6 +5,7 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6589EAFF-A99D-4E51-93AD-BDB9C6DF8B6B}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		.env = .env
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
@@ -64,6 +65,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transactions.Infrastructure", "Transactions\Transactions.Infrastructure\Transactions.Infrastructure.csproj", "{EEB8B12D-E4DF-4592-A761-D88C5C39A8FE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transactions.Persistance", "Transactions\Transactions.Persistance\Transactions.Persistance.csproj", "{B59C73E5-D6FC-4418-80E3-129F30F2A2F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banking.Api", "Banking\Banking.Api\Banking.Api.csproj", "{6D0AA722-BD5B-43BD-96E4-8E5D46935ED4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banking.Infrastructure", "Banking\Banking\Banking.Infrastructure\Banking.Infrastructure.csproj", "{2B67CEB2-5934-414C-B38C-273F0C777136}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banking.Persistence", "Banking\Banking.Persistence\Banking.Persistence.csproj", "{04FAD07A-B3D6-499A-B65F-FB6D77445F82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -155,6 +162,18 @@ Global
 		{B59C73E5-D6FC-4418-80E3-129F30F2A2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B59C73E5-D6FC-4418-80E3-129F30F2A2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B59C73E5-D6FC-4418-80E3-129F30F2A2F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D0AA722-BD5B-43BD-96E4-8E5D46935ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D0AA722-BD5B-43BD-96E4-8E5D46935ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D0AA722-BD5B-43BD-96E4-8E5D46935ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D0AA722-BD5B-43BD-96E4-8E5D46935ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B67CEB2-5934-414C-B38C-273F0C777136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B67CEB2-5934-414C-B38C-273F0C777136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B67CEB2-5934-414C-B38C-273F0C777136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B67CEB2-5934-414C-B38C-273F0C777136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04FAD07A-B3D6-499A-B65F-FB6D77445F82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04FAD07A-B3D6-499A-B65F-FB6D77445F82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04FAD07A-B3D6-499A-B65F-FB6D77445F82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04FAD07A-B3D6-499A-B65F-FB6D77445F82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -181,6 +200,9 @@ Global
 		{B4EDB40B-4C6D-4EBF-B85F-CFBB9E3C8B68} = {CD604FB2-469C-4074-829D-E0BDFB49788D}
 		{EEB8B12D-E4DF-4592-A761-D88C5C39A8FE} = {CD604FB2-469C-4074-829D-E0BDFB49788D}
 		{B59C73E5-D6FC-4418-80E3-129F30F2A2F2} = {CD604FB2-469C-4074-829D-E0BDFB49788D}
+		{6D0AA722-BD5B-43BD-96E4-8E5D46935ED4} = {4BBD67CC-025D-4BD0-99A9-85DBEE2F343D}
+		{2B67CEB2-5934-414C-B38C-273F0C777136} = {4BBD67CC-025D-4BD0-99A9-85DBEE2F343D}
+		{04FAD07A-B3D6-499A-B65F-FB6D77445F82} = {4BBD67CC-025D-4BD0-99A9-85DBEE2F343D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2481C55E-DA31-483A-9249-52C986E182D7}
