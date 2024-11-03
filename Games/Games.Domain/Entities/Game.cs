@@ -15,14 +15,14 @@ public class Game : Entity
     public bool ForTesting { get; private set; } = true;
     public bool IsDisabled { get; private set; } = false;
     public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;
-    public DateTime UpdatedAt { get; private set; }
+    public DateTime? UpdatedAt { get; private set; }
 
     public Game()
     {
 
     }
 
-    public Game(Guid gameProviderId, string name, string realUrl, string gameId, string imageUrl, bool forTesting, bool isDisabled)
+    public Game(Guid gameProviderId, string name, string realUrl, string gameId, string imageUrl, bool forTesting = true, bool isDisabled = false)
     {
         Id = Guid.NewGuid();
         GameProviderId = gameProviderId;
