@@ -16,6 +16,7 @@ public abstract class BaseController : ControllerBase
             case "NotFound":
                 return NotFound(result.Error);
             case "BadRequest":
+            case "ValidationError":
                 return BadRequest(result.Error);
             default:
                 return StatusCode(500, result.Error);

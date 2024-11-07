@@ -49,11 +49,11 @@ public class ValidationPipelineBehavior<TRequest, TResponse>
             return (ValidationResult.WithErrors(errors) as TResult)!;
         }
 
-        object validationResult = typeof(ValidationResult<>)
-             .GetGenericTypeDefinition()
-             .MakeGenericType(typeof(Result).GenericTypeArguments[0])
-             .GetMethod(nameof(ValidationResult.WithErrors))!
-             .Invoke(null, new object?[] { errors })!;
+        var genericArgument = typeof(TResult).GenericTypeArguments[0];
+        var validationResult = typeof(ValidationResult<>)
+            .MakeGenericType(genericArgument)
+            .GetMethod(nameof(ValidationResult.WithErrors))!
+            .Invoke(null, new object?[] { errors })!;
 
         return (TResult)validationResult;
     }
